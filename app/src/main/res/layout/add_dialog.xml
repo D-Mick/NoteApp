@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/add_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/antic"
+                android:gravity="center"
+                android:text="@string/add_note"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_note"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_note"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+                app:boxStrokeColor="@color/color4"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="clear_text"
+                app:startIconTint="@color/color4"
+                app:endIconTint="@color/color4"
+                app:hintTextColor="@android:color/black"
+                app:startIconDrawable="@drawable/ic_baseline_title_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:inputType="text"
+                    android:hint="@string/title">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_note"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/title_note"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+                app:boxStrokeColor="@color/color4"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/color4"
+                app:startIconTint="@color/color4"
+                app:hintTextColor="@android:color/black"
+                app:startIconDrawable="@drawable/ic_baseline_note_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textCursorDrawable="@null"
+                    android:inputType="text"
+                    android:hint="@string/note">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_note"
+                android:layout_marginTop="15dp"
+                android:background="@color/color4"
+                android:text="@string/save"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

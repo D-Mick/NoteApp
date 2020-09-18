@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:id="@+id/delete_all"-->
+<!--            android:alpha="0.75"-->
+<!--            android:drawableStart="@drawable/ic_baseline_delete_outline_24"-->
+<!--            android:drawablePadding="3dp"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingTop="8dp"-->
+<!--            android:paddingEnd="16dp"-->
+<!--            android:clickable="true"-->
+<!--            android:paddingBottom="8dp"-->
+<!--            android:text="Delete all"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="12sp"-->
+<!--            android:drawableLeft="@drawable/ic_baseline_delete_outline_24"-->
+<!--            android:focusable="true" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="6"
+            tools:listitem="@layout/notes_items" />
+
+    </LinearLayout>
+
+</FrameLayout>
